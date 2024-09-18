@@ -31,7 +31,7 @@ def load_keys() -> Tuple[str, int, str]:
     genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
     api_id = os.getenv("API_ID")
     api_hash = os.getenv("API_HASH")
-    bot_token = os.getenv("BOTTOKEN")
+    bot_token = os.getenv("BOT_TOKEN")
     return api_id, api_hash, bot_token
 
 

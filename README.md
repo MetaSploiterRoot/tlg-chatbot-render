@@ -66,9 +66,9 @@ To get the API ID and Hash of your Telegram app (your bot), you need to follow t
 Run the bot in local will required creating an `.env` file with the following contents:
 
 ```python
-OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
-API_ID="YOUR_TELEGRAM_APP_ID"
-API_HASH="YOUR_TELEGRAM_APP_HASH"
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+API_ID=YOUR_TELEGRAM_APP_ID
+API_HASH=YOUR_TELEGRAM_APP_HASH
 BOTTOKEN=YOUR_BOT_TOKEN
 ```
 
@@ -121,7 +121,7 @@ The bot can be deployed freely on <https://render.com> for 24/7 runtime as a web
 - Name, Region
 - Runtime: Python
 - Build Command: `pip install -r requirements.txt`
-- Start Command: `uvicorn src.main:app --port=${PORT:-8080} --log-config=log/logging.ini`
+- Start Command: `uvicorn src.main:app --host=0.0.0.0 --port=${PORT:-8080} --log-config=logs/logging.ini`
 - Instance Type: Free
 - Click on Advanced and add the 4 keys as environment variables. Add another variable: `PYTHON_VERSION` with value of `3.10.2` to define the runtime version.
 - Health Check Path: `/health`

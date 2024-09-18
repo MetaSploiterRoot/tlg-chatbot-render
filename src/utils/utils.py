@@ -95,7 +95,7 @@ RANDOM_ACTION = [
     SendMessageChooseStickerAction(),
     SendMessageChooseContactAction(),
 ]
-ALLOW_USERS = eval(os.getenv("ALLOW_USERS"))
+ALLOW_USERS = os.getenv("ALLOW_USERS")
 
 MODEL_DICT = {
     "gpt-4k": ("gpt-3.5-turbo-1106", 4096),
